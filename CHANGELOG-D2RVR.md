@@ -1,0 +1,429 @@
+# What's new in D2R VR
+
+## 0.163
+
+- **No more attacks on head turns and while walking.** BodyWalk's strike
+  gestures measured the hand's speed against the head, so a quick head turn
+  or a step swung still hands. BodyWalk 1.79 measures the hands themselves.
+  D2R VR now needs BodyWalk 1.79: Setup puts BodyWalk Portable 1.79 beside an
+  older one.
+- **Item labels on their items** in first person (F4, native too) - D2R VR
+  Settings > UI: F4 body > Item labels on the ground:
+  - "at their items, %": each label at its own item's depth in stereo
+    (100 = exactly; the game draws them on the same spot in both eyes, far off);
+  - "size far away": nearer labels larger, farther ones smaller;
+  - "stereo depth on top": all of them nearer or farther.
+- **Names over monsters**: their opacity works now, and they have a size
+  (UI: F4 body > Names over monsters).
+- **The game interface size** slider is on UI: F4 body now: with the square
+  game window, lower it until the inventory and the stash fit.
+- **Native OpenXR**: an open panel (inventory, trade, stash) moves the flat
+  picture out to the panel distance, and back when it closes.
+- **The map in your hand**: with the game's map in the middle (full screen)
+  the orb stayed empty - D2R VR now puts it on the right at start.
+- **Sky and fog in flat mode** are back with the game's Resolution Scale above
+  100.
+- **The square game window** no longer unticks itself when the game's
+  Settings.json has no window size in it, and the log says why a window is not
+  made square.
+- For support: the log names every press that makes the hero act and where it
+  came from ([debug] input_log).
+
+## 0.162
+
+- **A square window bigger than your monitor, up to 4000x4000** (D2R VR
+  Settings > Stereo > Native OpenXR > Square window). Make a virtual monitor
+  that big in BodyWalk (Virtual Monitor) - no need to make it your main
+  monitor, so your desktop icons stay put. When you enter a game, D2R VR
+  moves the game's window onto the biggest monitor and grows it to your size
+  a few seconds after the hero appears. The menus stay at your monitor's size:
+  D2R itself closes when its window is very tall while it builds a screen
+  (its title screen, the character screen).
+- **The game always starts at a size it can take**: as tall as your main
+  monitor holds, 2400 at most.
+- **The Low preset has cave ceilings too** - players on Low had none.
+- When ReShade64.dll does not load (Windows error 1114, a broken or second
+  copy of ReShade), the mod's log names every ReShade copy it finds in the
+  game - for the logs you send us.
+
+## 0.161
+
+- **No more fog flicker in the left eye.** With ReShade's Generic Depth on
+  and a big square window, ReShade sometimes swapped the scene's depth for
+  the game's shadow map when you turned your head, and the fog and the sky in
+  the left eye flashed as if seen from above. D2R VR's fog, sky and ceiling
+  now read the scene's depth through a channel of their own, which nothing
+  else can take over. ReShade's own depth stays for FlatVR's "3D from the
+  depth". Update the mod and its shader together - the installer does.
+- **The game's window no longer goes past your monitor.** A window taller
+  than about 2400 makes D2R itself close at the title screen, so the square
+  window (Stereo > Native OpenXR) is now fitted to your monitor: on a 4K
+  screen about 2069x2069. For a bigger square, use a bigger or a virtual
+  monitor (for example BodyWalk's Virtual Monitor).
+- **No more crash at the title screen from a too tall window.** A windowed
+  size taller than 2400 in the game's Settings.json (say 3000x3000, even
+  set read-only) is cut to 2400 when the game starts, and the read-only flag
+  is taken off - D2R itself closes at its title screen above about 2400.
+  After such crashes native OpenXR may have been switched off by the start
+  guard: switch it on again in D2R VR Settings (3D in the headset).
+
+## 0.160
+
+- **The fog, the sky and the ceiling always get the scene's own depth.**
+  D2R VR now hands ReShade the game's depth itself, so ReShade's guess no
+  longer matters. With a square window ReShade had taken the game's shadow
+  map instead: the fog and the sky were laid as if seen from above.
+- **Square game window up to 2400x2400** (D2R VR Settings > Stereo > Native
+  OpenXR > Square window: size). The 2047 limit of 0.159 is gone. Taller
+  windows are not possible: D2R itself closes at the title screen with a
+  window taller than about 2400 - so for "3000x3000" take 2400x2400.
+- **The square window stays square from the second start on.** The game
+  wrote the size Windows had cut its window to back into its own settings
+  (2400x2137 for 2400x2400), and the next start had black bars again. D2R VR
+  now keeps the window at the size you set while native OpenXR runs.
+
+## 0.159
+
+- **Native OpenXR: the game's window can be bigger than your monitor.**
+  Windows cut a window to the screen's height - a 2200x2200 window came out
+  2200x2136, and the picture in the headset got black bars. The window now
+  takes the size the game's Settings.json asks for.
+- **Native OpenXR without black bars**, two ways:
+  - Tick **"Square game window (no black bars)"** in D2R VR Settings >
+    Stereo > Native OpenXR and set its size (2000 by default, up to 2040).
+    Settings makes the game's window square for you and puts ReShade's depth
+    setting back to the one that works. Close the game first: it writes its
+    own window size back when it exits. A square window must stay under
+    2048: from 2048 on, ReShade takes the game's 4096x4096 shadow map for the
+    scene's depth, and the sky and the fog come out wrong.
+  - Or untick Stereo > **"Sharper: the picture keeps the window's shape"**:
+    no bars with any window, a little softer up and down.
+
+## 0.158
+
+- **FlatVR: the horizon no longer leans** after switching from native OpenXR
+  (or after a recentre): the camera took the head's sideways tilt at that
+  moment as "upright", and the picture stood a degree or three askew - seen
+  most when turning the head right. In the headset the camera's roll is now
+  always the head's own.
+- **Caves: any fire can light the ceiling** - a new box "Any fire lights the
+  ceiling (ReShade, from the picture)" (Ceiling): torches, braziers, fire
+  spells and burning monsters light the vault over them, found in the picture
+  itself. No reading of the game's memory, so it is light on the CPU (unlike
+  "Torches light the ceiling"). A spell's light goes out with the spell; a
+  fire out of sight keeps lighting for a few seconds.
+- **D2R VR talks to BodyWalk through Game Link**, BodyWalk's open link for
+  game mods, instead of a plugin of its own (the D2R Bridge). Setup puts the
+  Game Link plugin in and takes the old bridge out; the mod's actions are in
+  BodyWalk's Mapping as before.
+- **Native OpenXR**:
+  - "Eyes by turns" as an option (Performance > 3D in the headset): one eye a
+    game frame, half the work; the other eye shown as it was last drawn,
+    turned to the head by the headset. The sky in the headset was missing
+    there and is back.
+  - A brightness slider (Stereo > Native OpenXR), on headsets whose runtime
+    supports it - SteamVR does not yet.
+  - PS VR2 on SteamVR: the camera no longer falls to the ground when SteamVR
+    moves its "straight ahead" without saying so; a controller that loses its
+    place for a moment is held by the head instead of the arms jumping and
+    resetting; when SteamVR takes the input away (its dashboard) the hands
+    stay put and the buttons let go.
+  - The game no longer dies at every native start on some PCs (ReShade's DXGI
+    wrapper on the headset runtime's adapter lookup).
+- **Stereo "one pass, two pictures"**: the right eye's fog, sky and ceiling
+  use the right eye's own depth - they came out doubled.
+- **Your own ReShade setup**: "Keep ReShade as dxgi.dll" (Home) keeps a
+  ReShade of your own (2D presets, another mod that wants dxgi.dll) working -
+  with it on, Setup leaves your dxgi.dll alone; a dxgi.dll beside ours is put
+  aside, never deleted. ReShade's rows show in flat too.
+- In a shop the left stick click is the pad's own again: "hold the left
+  stick to repair all" at a vendor works.
+
+## 0.157
+
+- **The camera no longer spins without controllers.** With the controllers
+  put down (not seen by the headset) the view could swing between the ground
+  and the sky every frame: BodyWalk was handing the game the head from two
+  places at once, each with its own idea of straight ahead. The game now
+  takes the head from one place only - FlatVR's when it runs - drops a head
+  that jumps farther than a head can turn, and holds the last good one
+  through a moment without tracking. A recentre still comes through (after
+  0.3 s). Without hands the camera just stays put.
+- **Native OpenXR**: a frame the headset gives no eyes for keeps the last good
+  ones (up to 2 s) instead of turning the camera to BodyWalk's head and back;
+  a hand counts only when the headset knows where it is, not just how it is
+  turned.
+- **Native OpenXR no longer kills the game when the headset sleeps**: the
+  game waited without end for pictures SteamVR does not hand out while the
+  headset is asleep, the graphics card gave up and the game died. A picture
+  that does not come is now left out of that frame.
+- **Native OpenXR start guard**: on some PCs the game died at every start in
+  native mode (the headset's runtime and ReShade do not get along there).
+  If the game dies while native OpenXR is starting, the next start switches
+  native off ([openxr] on=0) and runs on FlatVR - the log says so; switch it
+  on again in D2R VR Settings > Performance.
+- **Native OpenXR: the head turns about the neck** ("Head turns about the
+  neck", Camera tab) - looking down the eyes go forward over the chest, as on
+  FlatVR. It did nothing in native before.
+- D2R VR Settings: the Camera tab's first-person group is F4.
+- **If the game crashes, we can now see where**: D2R VR writes each step of
+  its start as it goes (d2rloader\logs\d2r_vr_start.txt), and a crash's
+  module, code and stack to d2r_vr_crash.txt with a minidump beside it.
+  Collect logs (D2R VR Settings > Home) takes them, D2RLoader's own crash
+  reports and Windows' record of the crash - post the zip in our Discord.
+
+## 0.156
+
+- **Native OpenXR (prototype)**: the game shows itself in the headset - no
+  FlatVR screen in between (D2R VR Settings > Performance > 3D in the headset
+  > Native OpenXR; needs BodyWalk 1.78). Stereo from the very first moment in
+  first person, the hero's body facing where you look from the start, your
+  controllers through BodyWalk even when BodyWalk was started after the game,
+  and BodyWalk's belt zones (gesture zones ticked "VR") as see-through balls
+  in the headset. Bare hands (no controller) press nothing. A sharper picture
+  by default: each eye keeps the game window's shape, black above and below
+  (Stereo > Native OpenXR, "Sharper: the picture keeps the window's shape").
+  Tip: switch Virtual Desktop's Synchronous Spacewarp off, or it may hold the
+  game at 45 fps.
+- **Launch Diablo II starts BodyWalk too**, and FlatVR once BodyWalk is up -
+  no need to know to start them first.
+- **BodyWalk 1.78 required**: FlatVR can leave out a late picture instead of
+  flashing an old frame on head turns ("Leave out late pictures"), and
+  BodyWalk follows the game's wishes while minimised. Setup puts BodyWalk
+  Portable 1.78 beside the game when yours is older.
+- **Medium** quality now draws models out to 200 (was 300): about 2 ms less
+  CPU a frame for little that you would miss.
+
+## 0.155
+
+- **Collect logs for support** (D2R VR Settings > Home): one zip on your
+  desktop with the logs, the settings, the versions and your graphics card -
+  while the game runs it first records 10 seconds of how the frames are
+  drawn. Post the zip in our Discord (#diablo-2-vr) when something is wrong.
+- **D2R VR needs BodyWalk 1.77** (FlatVR's frame conveyor). Setup checks the
+  BodyWalk you have: if it is older - Steam's is 1.74 for now - it stays as
+  it is and Setup puts BodyWalk Portable 1.77 in the game's folder.
+- **Start BodyWalk starts the newest BodyWalk** it finds, never one older than
+  D2R VR needs; Home > Status says when the running BodyWalk is too old.
+- FlatVR's add-on 2.19 with the picture's present moment is back (it goes
+  with BodyWalk 1.77).
+- **Cave ceilings for everyone**: their stone pictures now come with the
+  installer - without them ReShade said "There were errors loading some
+  effects" and the caves had no ceiling.
+- Setup switches FlatVR's background and glow round the screen off (BodyWalk
+  > FlatVR > Background & Glow).
+
+## 0.154
+
+- **The eyes stay in line in Stereo - one pass, two pictures** with the
+  BodyWalk that comes with the installer (1.76): 0.153 brought a newer FlatVR
+  add-on, and with BodyWalk 1.76 the eyes went out of line after about 10
+  seconds. The add-on is the one from 0.152 again; the newer one comes back
+  with BodyWalk 1.77.
+- **Pipeline depth is 0 by default again** (D2R VR Settings > Stereo >
+  Timing): with 1 (0.153) head turns lagged and the sky floated in mono and
+  in eyes by turns.
+
+## 0.153
+
+- **A new 3D mode: Stereo - one pass, two pictures** (the default). The game
+  draws each frame once and the right eye is drawn again on the graphics card
+  from the same work, with its own camera: true 3D with the sky and the
+  shadows right in both eyes, at nearly the mono frame rate (on the author's
+  PC 127-159 stereo pairs a second, against 108 with two passes). D2R VR
+  Settings > Performance > **3D in the headset** has four modes now:
+  Stereo - one pass, two pictures; Stereo - eyes by turns; 3D from the depth
+  (ReShade); Mono. If the new one is unstable on your PC, take Eyes by turns.
+- **Frames paced to the headset**: the game's frames are held to the
+  headset's refresh rate - a game faster or slower than the headset juddered
+  in head turns. D2R VR Settings sets the game's frame cap to the headset
+  rate (twice it for Eyes by turns).
+- **Smoother head turns** in mono, 3D from the depth and Eyes by turns when
+  the game and the headset run at different rates: Pipeline depth is 1 by
+  default, and the sky follows the frame that is shown.
+- The game's temporal anti-aliasing is set to FXAA when the game starts in
+  real stereo - it mixed the two eyes into a ghost behind everything that
+  moves ([stereo] keep_taa=1 keeps it).
+- **No hitch every 10 seconds**: the log's thread count (0.152) stopped the
+  game for 30-50 ms every 10 s; it no longer runs on the game's thread.
+- Known limits: with DLSS, Stereo - one pass shares one DLSS between the two
+  eyes (a DLSS for each eye still hangs the graphics card there - off). When
+  the graphics card cannot keep the headset's rate, the picture judders -
+  lower the headset rate or the resolution.
+- **For developers - help is welcome**: the roadmap, the known problems (what
+  we know about each one and where in the code to start) and notes for
+  developers are in [docs/](https://github.com/natpoh/diablo2-vr-port/tree/main/docs) - fork the project, fix one and
+  send a pull request. The weapon weight work for first person is published
+  too: a model with tests and a Unity bench, not in the game yet
+  ([docs/WEAPON_WEIGHT.md](docs/WEAPON_WEIGHT.md)).
+- **Next version**: D2R VR moves to BodyWalk's Game Link standard (the open
+  BodyWalk plugin SDK) instead of its own bridge to BodyWalk.
+
+## 0.152
+
+- **Smooth head turns again in tabletop and first person**: FlatVR's frame
+  ring (new in 0.150) is now off by default - with it the picture juddered
+  and doubled when you turned your head. Players who tried it: "a night and
+  day difference". The switch stays in D2R VR Settings > Stereo > Timing
+  (Newest finished picture); keep **Frame stamps** on - without them it is
+  as bad as before.
+- The log tells where a frame's time goes (presents a second, the game's
+  busiest threads, and in real stereo each eye's pass).
+
+## 0.151
+
+- **Creating a character works in first person (F4)**: the Create New screen
+  was taken for a game area - the heroes stood there without heads and the
+  name field and buttons slid off. It is a menu again, with the game's own
+  camera.
+- **Two switches for judder in head turns** (tabletop and first person),
+  D2R VR Settings > Stereo > Timing, both on by default and live:
+  **Frame stamps** - FlatVR places each frame at the head pose it was drawn
+  for; untick and the screen stays at the head as it is, like in the other
+  views. **Newest finished picture (FlatVR frame ring)** - untick and the
+  picture goes over to FlatVR the old way. If tabletop or
+  first person doubles or judders when you turn your head, untick them one
+  at a time and tell us which one helped.
+- FlatVR's ReShade add-on 2.19 (the frame ring can be switched off from the
+  game).
+
+## 0.150
+
+- **Much faster with DLSS in real stereo**: the motion fix for DLSS (0.145)
+  also ran a heavy self-check every frame. It no longer does - 50 stereo
+  pairs a second became 79 on the author's PC (100 -> 158 fps).
+
+## 0.149
+
+- **A desktop shortcut**: Setup can put "D2R VR" on the desktop (ticked by
+  default) - D2R VR Settings starts BodyWalk, installs ReShade and D2RLoader
+  and launches the game, so there is no need to open the game's folder.
+
+## 0.148
+
+- **Setup's "Open D2R VR Settings" works**: on the finish screen it failed with
+  "CreateProcess failed; code 740 - the requested operation requires
+  elevation" when Setup ran as administrator.
+
+## 0.147
+
+- **Launch the game from D2R VR Settings**: Home > **Launch Diablo II
+  (D2RLoader)**, under Start BodyWalk - shown while D2RLoader is installed and
+  the game is not running.
+
+## 0.146
+
+- **ReShade installs from D2R VR Settings now**: Home > Status > **Install
+  ReShade** downloads it from reshade.me and sets it up for the game by
+  itself - no renaming files. Setup no longer installs it: its ReShade step
+  failed ("did not finish, code 1") when D2RLoader was not in the game's
+  folder yet.
+
+## 0.145
+
+- **DLSS works with real stereo**: each eye gets a DLSS of its own, fed the
+  motion against that same eye's last picture - no shaking standing still, no
+  smear in head turns. The Status tab no longer asks to switch DLSS off.
+- **Character screen**: the heroes keep their heads (the mod's VR camera stays
+  out of the menus).
+- **Performance tab**: Potato is Low with the 3D made from ReShade's depth
+  (one picture a frame) instead of real stereo. New "Headset refresh rate"
+  (72-120 Hz) sets the game's frame cap - the rate for one picture a frame,
+  twice it for real stereo. Render distance, rate and cap need the game
+  restarted (said under the 3D choice).
+- **3D in the headset follows the mod**: FlatVR's 3D source (depth, stereo
+  pair or none) is set by the mod whenever BodyWalk starts and whenever it
+  changes; FlatVR's Head Lock comes back after such a switch. The mod's
+  BodyWalk profile no longer forces the stereo pair on, and keeps the depth
+  unflipped.
+- **The toolbar is on your left forearm now** (first person, F4): orbs,
+  belt and skills lie along the inside of the arm, cut in two - turn the palm
+  up to read it. To have it on the body again: D2R VR Settings > **UI: F4
+  body** > Toolbar in the headset > **Where: Low in front** (or Chest, low).
+  The forearm and the body each keep sliders of their own.
+- **New defaults from the author's own play**: cave ceilings on with the tuned cathedral and sewer
+  vaults, near fog (30-200), the crosshair and the left hand's hold retuned,
+  the inventory screen nearer (2.5 m).
+- **The staff in the right hand works again**: the left hand takes it with
+  the grip and slides along it, closes and opens with the grip while it is off
+  it, and spells go along the staff - all of it had been off whenever "aim
+  from the left hand to the right" was off (the default since 0.140).
+
+## 0.144
+
+- **The belt works again**: the potion zones at your waist (first person, F4)
+  show in the headset and fire, and so do the sword, axe and throwing swings.
+  The mod's BodyWalk profile had shipped without their recorded positions.
+- **Every game control from BodyWalk**: 68 new actions "D2R key: ..." in
+  BodyWalk's Mapping tab - skills F1-F16, potions 1-4, Alt, Run, Shift,
+  character, inventory, map, mercenary, cube and the rest - pressed straight
+  in the game, no gamepad and no key needed.
+- **Third person (F2) like flat mode**: the mouse turns the camera, the pointer
+  is a crosshair in the middle (on/off, size, and its depth looking ahead and
+  looking down on the UI: F2 tab), a click goes
+  there, W A S D walk where the camera looks; F9 frees the pointer for menus.
+- **The game on the floor (F3)**: the corner map gets size, depth and place
+  like the toolbar (UI: F3 tab), and the mouse pointer lies on the game's
+  ground by itself.
+- **Turning with the right stick in first person (F4) fixed**: the body
+  turned not at all when some of the game's controller polls came without
+  BodyWalk's pad and reset the stick to the middle.
+
+## 0.143
+
+- **Smoother in dungeons on weaker PCs.** The torch light on the ceiling is off
+  for now: finding the torches read all of the game's memory every 1.5 seconds
+  and cost about a third of a CPU core while a ceiling was drawn.
+- **Ceilings in act 2**: the Lut Gholein sewers (grey-beige brick) and the
+  palace harem (Moorish coffers). Backgrounds done: 25 - sky over 18 open-air
+  area types, a ceiling in 7 dungeon types.
+- **The cathedral** keeps its flat ceiling with one dome over the altar.
+- **Third person in VR**: W A S D move the hero relative to the camera.
+
+## 0.142
+
+- **Ceilings in the cathedral and the catacombs**, anything the game draws above
+  the ceiling cut cleanly, ceiling heights from the area's floor. Settings >
+  Ceiling.
+
+## 0.141
+
+- **Sky fixed in several areas.** Tristram, Kurast (Lower Kurast, the Bazaar,
+  Upper Kurast, the Causeway), Travincal, the River of Flame, the Chaos
+  Sanctuary and Nihlathak's Temple now have their sky, like the other
+  open-air areas.
+- **The barbarian's left hand fixed.** In first person his second weapon sits
+  properly in the left hand, and he can strike with it.
+- **Daggers can be thrown** - a Throw action in the mod's BodyWalk profile, plus the left-hand attack and D-pad actions.
+- **"D2R Left Hand" tab** in BodyWalk's Mapping (D2R Bridge 0.23): actions for
+  the left hand while it holds a weapon.
+- **Ready for game updates.** Every time the game starts the mod looks for the
+  game code it needs (54 places) by signature, so a game or D2RLoader update
+  that moves the code does not switch the mod off. A new **Status** tab in
+  D2R VR Settings shows each one - found, not found and what goes off without
+  it - and a **Scan** button looks again for whatever is missing.
+
+## 0.140
+
+- **The author's tuned settings are the defaults**: depth from above, the body
+  in F4, fog, sky, the toolbar and map in the headset, the weapons.
+- **ReShade works right after installing.** The installer fixes ReShade's
+  effect search path, which ReShade's own setup writes in a form it cannot read
+  (no fog and no sky before).
+
+## 0.139
+
+- **D2R VR Settings checks the game's video settings** in its Status column:
+  DLSS, Vertical Sync and TAA anti-aliasing must be off (they mix or halve the
+  two eyes' frames), and a frame cap under 180 is flagged.
+
+## 0.138 - first public release
+
+- Four views, F1 - F4: from above in real 3D, third person, the game on your
+  floor, and first person (preview - the weapons are not calibrated yet).
+- Flat mode: a monitor, mouse and W A S D, no headset and no BodyWalk.
+- The installer sets up ReShade, the mod, FlatVR's add-on and, if needed, a
+  free BodyWalk Lite inside the game folder; an update keeps your tuned
+  settings, and uninstalling removes everything the mod put in.
+- D2R VR Settings: Start BodyWalk / Start FlatVR buttons, a status of the whole
+  VR chain, an update check.

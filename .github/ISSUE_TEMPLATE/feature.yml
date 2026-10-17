@@ -1,0 +1,27 @@
+name: Feature idea
+description: Suggest something for ZVDiablo2VR.
+title: "[Idea]: "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search the existing issues first. Ideas that act on online games cannot be accepted: the mod is offline only.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would it change for the player?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: How should it feel in the headset?
+      description: The gesture or button, what you see and feel, and what must never happen.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description: Other VR games that do it well, workarounds today. No game files or private data.

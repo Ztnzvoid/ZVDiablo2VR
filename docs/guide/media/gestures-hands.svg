@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="740" viewBox="0 0 1000 740" role="img"><title>Hand gestures</title><desc>Six panels: a missile spell thrown from beside the head, a ground spell pointed then raised and brought down, an item picked up from the ground with a low hand and the grip, a belt potion brought to the mouth and tipped, the 3D bag taken from the lower back, and the other hand rummaging in the open bag.</desc>
+<defs>
+<marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f1d28a"/></marker>
+<marker id="at" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ee3d8"/></marker>
+</defs>
+<style>
+.bg{fill:#14110f}
+.panel{fill:#1b1714;stroke:#2e2925;stroke-width:1}
+.limb{fill:none;stroke:#8a7f72;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.ghost{fill:none;stroke:#8a7f72;stroke-width:2;stroke-dasharray:3 3}
+.head{fill:#3a342e;stroke:#8a7f72;stroke-width:1.5}
+.ground{stroke:#4a433b;stroke-width:2}
+.path-a{fill:none;stroke:#f1d28a;stroke-width:2;stroke-dasharray:6 4}
+.path-t{fill:none;stroke:#9ee3d8;stroke-width:2;stroke-dasharray:6 4}
+.solid-a{fill:none;stroke:#f1d28a;stroke-width:2.5}
+.laser{stroke:#e0574a;stroke-width:2}
+.belt{fill:#c9952e;stroke:#f1d28a;stroke-width:0.8}
+.leather{fill:#5a3d24;stroke:#b08a5a;stroke-width:1.2}
+.inner{fill:#2e2015;stroke:#7a5a3a;stroke-width:1}
+.potion{fill:#8c2f2f;stroke:#f0b4b4;stroke-width:1}
+.item{fill:#c9952e;stroke:#f1d28a;stroke-width:1}
+.ctrl{fill:#3a342e;stroke:#cdbfa6;stroke-width:1.2}
+.fire{fill:#c9552e;stroke:#f1a37a;stroke-width:1.2}
+.tip{fill:#25201c;stroke:#cdbfa6;stroke-width:1}
+.badge circle{fill:#1f6b63;stroke:#9ee3d8;stroke-width:0.8}
+.badge text{fill:#fff;font-weight:bold;font-size:11px}
+text{font-family:Georgia,'Times New Roman',serif;fill:#e9dcc4}
+.tt{font-size:18px;font-weight:bold;fill:#f3e6cc}
+.th{font-size:14px;font-weight:bold;fill:#f3e6cc}
+.ts{font-size:11.5px;fill:#cdbfa6}
+.tl{font-size:11px;fill:#f1d28a}
+.tk{font-size:9.5px;fill:#e9dcc4}
+</style>
+<rect class="bg" x="0" y="0" width="1000" height="740" rx="12"/>
+<text class="tt" x="24" y="36">Spells, items and potions by hand</text>
+
+<!-- E: spell throw -->
+<g transform="translate(10,56)">
+<rect class="panel" x="0" y="0" width="320" height="330" rx="10"/>
+<text class="th" x="16" y="28">A missile spell: throw it</text>
+<circle class="head" cx="110" cy="70" r="13"/>
+<line class="limb" x1="110" y1="84" x2="110" y2="146"/>
+<polyline class="limb" points="110,146 96,210"/>
+<polyline class="limb" points="110,146 124,210"/>
+<circle class="ghost" cx="128" cy="62" r="7"/>
+<polyline class="limb" points="110,96 150,106 186,100"/>
+<path class="path-t" d="M 132 54 Q 176 52 186 90" marker-end="url(#at)"/>
+<text class="tl" x="160" y="50" style="fill:#9ee3d8">fast</text>
+<line x1="200" y1="100" x2="240" y2="104" stroke="#f1a37a" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="204" y1="92" x2="238" y2="98" stroke="#f1a37a" stroke-width="1" stroke-dasharray="3 3"/>
+<circle class="fire" cx="256" cy="106" r="12"/>
+<text class="ts" x="16" y="244">A missile spell in your left hand (Fire Bolt,</text>
+<text class="ts" x="16" y="260">Bone Spear...): throw it - the hand from beside</text>
+<text class="ts" x="16" y="276">your head to in front of you, fast. It flies the</text>
+<text class="ts" x="16" y="292">way your hand went. Or press the left trigger:</text>
+<text class="ts" x="16" y="308">cast along the hand.</text>
+</g>
+
+<!-- F: point, raise, bring down -->
+<g transform="translate(340,56)">
+<rect class="panel" x="0" y="0" width="320" height="330" rx="10"/>
+<text class="th" x="16" y="28">On the ground: point, raise, bring down</text>
+<line class="ground" x1="20" y1="212" x2="300" y2="212"/>
+<circle class="head" cx="90" cy="70" r="13"/>
+<line class="limb" x1="90" y1="84" x2="90" y2="146"/>
+<polyline class="limb" points="90,146 76,210"/>
+<polyline class="limb" points="90,146 104,210"/>
+<polyline class="limb" points="90,96 124,112 154,124"/>
+<line x1="160" y1="128" x2="252" y2="206" stroke="#9ee3d8" stroke-width="1.5" stroke-dasharray="4 4"/>
+<ellipse cx="258" cy="210" rx="22" ry="5" fill="#1f6b63" stroke="#9ee3d8"/>
+<line class="solid-a" x1="180" y1="114" x2="180" y2="64" marker-end="url(#am)"/>
+<line class="solid-a" x1="200" y1="64" x2="200" y2="122" marker-end="url(#am)"/>
+<g class="badge"><circle cx="232" cy="160" r="10"/><text x="232" y="160" text-anchor="middle" dominant-baseline="central">1</text></g>
+<g class="badge"><circle cx="166" cy="56" r="10"/><text x="166" y="56" text-anchor="middle" dominant-baseline="central">2</text></g>
+<g class="badge"><circle cx="216" cy="56" r="10"/><text x="216" y="56" text-anchor="middle" dominant-baseline="central">3</text></g>
+<text class="ts" x="16" y="244">A spell put on the ground or on a corpse</text>
+<text class="ts" x="16" y="260">(Blizzard, Teleport, a curse, Raise Skeleton):</text>
+<text class="ts" x="16" y="276">1 point at the spot, 2 raise the hand, 3 bring</text>
+<text class="ts" x="16" y="292">it down. It lands where you pointed. Or press</text>
+<text class="ts" x="16" y="308">the left trigger.</text>
+</g>
+
+<!-- G: pick up -->
+<g transform="translate(670,56)">
+<rect class="panel" x="0" y="0" width="320" height="330" rx="10"/>
+<text class="th" x="16" y="28">Pick up: a low hand and the grip</text>
+<line class="ground" x1="20" y1="212" x2="300" y2="212"/>
+<circle class="head" cx="148" cy="84" r="13"/>
+<line class="limb" x1="138" y1="96" x2="110" y2="146"/>
+<polyline class="limb" points="110,146 98,210"/>
+<polyline class="limb" points="110,146 126,210"/>
+<polyline class="limb" points="134,104 160,146 182,184"/>
+<circle cx="200" cy="200" r="30" fill="none" stroke="#f1d28a" stroke-width="1" stroke-dasharray="3 4"/>
+<polygon class="item" points="200,192 210,202 200,210 190,202"/>
+<text class="tl" x="236" y="176">grip</text>
+<path class="path-t" d="M 176 172 Q 120 214 84 150" marker-end="url(#at)"/>
+<text class="tl" x="22" y="140" style="fill:#9ee3d8">bag: lower back</text>
+<text class="ts" x="16" y="244">A low hand over an item on the ground, squeeze</text>
+<text class="ts" x="16" y="260">the grip: the game's own model is in your hand.</text>
+<text class="ts" x="16" y="276">Let go at your lower back: into the bag. At the</text>
+<text class="ts" x="16" y="292">belt: a potion. At a holster place: a weapon.</text>
+<text class="ts" x="16" y="308">Anywhere else: it stays on the ground.</text>
+</g>
+
+<!-- H: drink -->
+<g transform="translate(10,396)">
+<rect class="panel" x="0" y="0" width="320" height="330" rx="10"/>
+<text class="th" x="16" y="28">Drink: to the mouth, and tip</text>
+<circle class="head" cx="110" cy="70" r="13"/>
+<line class="limb" x1="110" y1="84" x2="110" y2="146"/>
+<polyline class="limb" points="110,146 96,210"/>
+<polyline class="limb" points="110,146 124,210"/>
+<rect class="belt" x="102" y="134" width="40" height="7" rx="2"/>
+<polyline class="limb" points="110,96 146,112 134,84"/>
+<g transform="translate(134,74) rotate(-55)"><rect class="potion" x="-7" y="-9" width="14" height="18" rx="6"/><rect class="potion" x="-3" y="-15" width="6" height="7" rx="1"/></g>
+<path class="path-a" d="M 150 138 Q 182 112 150 86" marker-end="url(#am)"/>
+<path class="solid-a" d="M 156 52 A 18 18 0 0 0 128 46" marker-end="url(#am)"/>
+<text class="tl" x="164" y="50">tip it</text>
+<text class="tl" x="166" y="134">from the belt</text>
+<text class="ts" x="16" y="244">Grip a potion on your belt, bring it to your</text>
+<text class="ts" x="16" y="260">mouth and tip it: you drink. Open the hand</text>
+<text class="ts" x="16" y="276">anywhere else: it goes back to the belt.</text>
+<text class="ts" x="16" y="292">From the bag, a potion, a scroll or a tome let</text>
+<text class="ts" x="16" y="308">go at the mouth is used the same way.</text>
+</g>
+
+<!-- I: open the bag -->
+<g transform="translate(340,396)">
+<rect class="panel" x="0" y="0" width="320" height="330" rx="10"/>
+<text class="th" x="16" y="28">The bag: reach behind your back</text>
+<circle class="head" cx="110" cy="70" r="13"/>
+<line class="limb" x1="110" y1="84" x2="110" y2="146"/>
+<polyline class="limb" points="110,146 96,210"/>
+<polyline class="limb" points="110,146 124,210"/>
+<polyline class="limb" points="110,96 92,122 86,148"/>
+<circle cx="84" cy="152" r="12" fill="none" stroke="#9ee3d8" stroke-width="1.5" stroke-dasharray="3 3"/>
+<text class="tl" x="22" y="180" style="fill:#9ee3d8">empty hand,</text>
+<text class="tl" x="22" y="194" style="fill:#9ee3d8">grip</text>
+<path class="path-t" d="M 92 168 Q 150 206 200 146" marker-end="url(#at)"/>
+<rect class="leather" x="196" y="98" width="72" height="42" rx="10"/>
+<path d="M 200 108 Q 232 124 264 108" fill="none" stroke="#b08a5a" stroke-width="1.2"/>
+<circle cx="216" cy="132" r="2" fill="#f1d28a"/><circle cx="232" cy="132" r="2" fill="#f1d28a"/><circle cx="248" cy="132" r="2" fill="#5a4a3a"/>
+<text class="tl" x="196" y="88">the bag, in that hand</text>
+<text class="ts" x="16" y="244">An empty hand at your middle or lower back,</text>
+<text class="ts" x="16" y="260">squeeze the grip: your inventory comes into</text>
+<text class="ts" x="16" y="276">that hand as a leather bag, open. Or press the</text>
+<text class="ts" x="16" y="292">bag icon in a wheel. Let go of the grip, or put</text>
+<text class="ts" x="16" y="308">the hand behind your back: it goes away.</text>
+</g>
+
+<!-- J: rummage -->
+<g transform="translate(670,396)">
+<rect class="panel" x="0" y="0" width="320" height="330" rx="10"/>
+<text class="th" x="16" y="28">In the bag: the other hand rummages</text>
+<rect class="leather" x="30" y="64" width="176" height="120" rx="16"/>
+<rect class="inner" x="42" y="76" width="152" height="96" rx="10"/>
+<line x1="56" y1="96" x2="112" y2="90" stroke="#d8d0c0" stroke-width="3" stroke-linecap="round"/>
+<circle class="potion" cx="146" cy="124" r="9" style="stroke:#f1d28a;stroke-width:2.5"/>
+<circle cx="76" cy="146" r="6" fill="none" stroke="#f1d28a" stroke-width="2"/>
+<rect x="164" y="88" width="20" height="12" rx="2" fill="#cdbfa6"/>
+<circle class="ctrl" cx="272" cy="68" r="14"/>
+<line class="laser" x1="262" y1="76" x2="154" y2="120"/>
+<rect class="tip" x="186" y="136" width="120" height="60" rx="6"/>
+<text class="tk" x="194" y="154" style="fill:#f3e6cc;font-weight:bold">Healing Potion</text>
+<text class="tk" x="194" y="170">Trigger: use</text>
+<text class="tk" x="194" y="185">Grip: take</text>
+<text class="ts" x="16" y="244">Touch or point at an item: it lights, with a</text>
+<text class="ts" x="16" y="260">tooltip. Grip: take it. Trigger: drink, read, open</text>
+<text class="ts" x="16" y="276">the Cube; a weapon taken out: wield it. Let go</text>
+<text class="ts" x="16" y="292">in the bag: it stays there. Outside: dropped on</text>
+<text class="ts" x="16" y="308">the ground for real, where you threw it.</text>
+</g>
+</svg>

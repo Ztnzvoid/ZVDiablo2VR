@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580" viewBox="0 0 1000 580" role="img"><title>Controllers</title><desc>A generic pair of VR controllers seen from above, each input coloured and explained: trigger, grip, stick (walk, turn, click for a wheel, held for the game's menu), the face buttons Y and X on the left, B and A on the right, and the left menu button, in the default buttons layout.</desc>
+<style>
+.bg{fill:#14110f}
+.body{fill:#3a342e;stroke:#8a7f72;stroke-width:1}
+.stick{fill:#25201c;stroke:#cdbfa6;stroke-width:1.2}
+.btn{fill:#5b3f8c;stroke:#c8b4f0;stroke-width:1}
+.menu{fill:#1f6b63;stroke:#9ee3d8;stroke-width:1}
+.trig{fill:#c9952e;stroke:#f1d28a;stroke-width:1}
+.grip{fill:#8c3f3f;stroke:#f0b4b4;stroke-width:1}
+.lead{stroke:#8a7f72;stroke-width:1;fill:none}
+.rule{stroke:#3a342e;stroke-width:1}
+text{font-family:Georgia,'Times New Roman',serif;fill:#e9dcc4}
+.tt{font-size:18px;font-weight:bold;fill:#f3e6cc}
+.th{font-size:14px;font-weight:bold;fill:#f3e6cc}
+.ts{font-size:11.5px;fill:#cdbfa6}
+.tl{font-size:10px;letter-spacing:1px;fill:#cdbfa6}
+.tb{font-size:13px;font-weight:bold;fill:#fff}
+.tn{font-size:12px;fill:#cdbfa6}
+</style>
+<rect class="bg" x="0" y="0" width="1000" height="580" rx="12"/>
+<text class="tt" x="500" y="36" text-anchor="middle">Your controllers - the default layout</text>
+<text class="ts" x="500" y="58" text-anchor="middle">[controls] layout = buttons, in the world. In the game's menus the buttons keep the game's own navigation.</text>
+
+<!-- left controller -->
+<text class="th" x="430" y="128" text-anchor="middle">LEFT</text>
+<rect class="body" x="402" y="250" width="56" height="180" rx="24"/>
+<circle class="body" cx="430" cy="210" r="58"/>
+<rect class="trig" x="416" y="270" width="36" height="16" rx="6"/>
+<rect class="grip" x="396" y="310" width="12" height="90" rx="5"/>
+<circle class="stick" cx="414" cy="200" r="19"/>
+<circle class="stick" cx="414" cy="200" r="9"/>
+<circle class="btn" cx="458" cy="190" r="13"/><text class="tb" x="458" y="190" text-anchor="middle" dominant-baseline="central">Y</text>
+<circle class="btn" cx="450" cy="236" r="13"/><text class="tb" x="450" y="236" text-anchor="middle" dominant-baseline="central">X</text>
+<circle class="menu" cx="402" cy="244" r="6"/>
+<line class="lead" x1="364" y1="200" x2="395" y2="200"/><text class="tl" x="360" y="200" text-anchor="end" dominant-baseline="central">STICK</text>
+<line class="lead" x1="364" y1="252" x2="397" y2="246"/><text class="tl" x="360" y="252" text-anchor="end" dominant-baseline="central">MENU</text>
+<line class="lead" x1="364" y1="278" x2="416" y2="278"/><text class="tl" x="360" y="278" text-anchor="end" dominant-baseline="central">TRIGGER</text>
+<line class="lead" x1="364" y1="355" x2="396" y2="355"/><text class="tl" x="360" y="355" text-anchor="end" dominant-baseline="central">GRIP</text>
+
+<!-- right controller -->
+<text class="th" x="570" y="128" text-anchor="middle">RIGHT</text>
+<rect class="body" x="542" y="250" width="56" height="180" rx="24"/>
+<circle class="body" cx="570" cy="210" r="58"/>
+<rect class="trig" x="548" y="270" width="36" height="16" rx="6"/>
+<rect class="grip" x="592" y="310" width="12" height="90" rx="5"/>
+<circle class="stick" cx="586" cy="200" r="19"/>
+<circle class="stick" cx="586" cy="200" r="9"/>
+<circle class="btn" cx="542" cy="190" r="13"/><text class="tb" x="542" y="190" text-anchor="middle" dominant-baseline="central">B</text>
+<circle class="btn" cx="550" cy="236" r="13"/><text class="tb" x="550" y="236" text-anchor="middle" dominant-baseline="central">A</text>
+<line class="lead" x1="605" y1="200" x2="636" y2="200"/><text class="tl" x="640" y="200" dominant-baseline="central">STICK</text>
+<line class="lead" x1="584" y1="278" x2="636" y2="278"/><text class="tl" x="640" y="278" dominant-baseline="central">TRIGGER</text>
+<line class="lead" x1="604" y1="355" x2="636" y2="355"/><text class="tl" x="640" y="355" dominant-baseline="central">GRIP</text>
+
+<!-- left legend -->
+<rect class="trig" x="24" y="92" width="20" height="10" rx="3"/>
+<text class="th" x="52" y="100">Trigger</text>
+<text class="ts" x="52" y="117">Casts the left hand's trigger skill,</text>
+<text class="ts" x="52" y="132">along the left hand.</text>
+<rect class="grip" x="29" y="148" width="10" height="20" rx="3"/>
+<text class="th" x="52" y="160">Grip</text>
+<text class="ts" x="52" y="177">Take a potion, a weapon, an item, the</text>
+<text class="ts" x="52" y="192">bag. Open the hand: let go.</text>
+<circle class="stick" cx="34" cy="216" r="9"/>
+<text class="th" x="52" y="220">Stick</text>
+<text class="ts" x="52" y="237">Push: walk.</text>
+<text class="ts" x="52" y="252">Click: a wheel on this hand; point at it</text>
+<text class="ts" x="52" y="267">with the right hand. Held 0.5 s: the</text>
+<text class="ts" x="52" y="282">game's menu (inventory, skills...).</text>
+<circle class="btn" cx="34" cy="306" r="9"/><text class="tb" x="34" y="306" text-anchor="middle" dominant-baseline="central" style="font-size:11px">Y</text>
+<text class="th" x="52" y="310">Y (upper button)</text>
+<text class="ts" x="52" y="327">Casts the skill given to Y.</text>
+<circle class="btn" cx="34" cy="351" r="9"/><text class="tb" x="34" y="351" text-anchor="middle" dominant-baseline="central" style="font-size:11px">X</text>
+<text class="th" x="52" y="355">X (lower button)</text>
+<text class="ts" x="52" y="372">Casts the skill given to X.</text>
+<circle class="menu" cx="34" cy="396" r="6"/>
+<text class="th" x="52" y="400">Menu button</text>
+<text class="ts" x="52" y="417">The game's menu (Esc).</text>
+
+<!-- right legend -->
+<rect class="trig" x="704" y="92" width="20" height="10" rx="3"/>
+<text class="th" x="732" y="100">Trigger</text>
+<text class="ts" x="732" y="117">Casts the right hand's trigger skill.</text>
+<text class="ts" x="732" y="132">Bow: nock, draw, release.</text>
+<text class="ts" x="732" y="147">Crossbow: shoots once cocked.</text>
+<rect class="grip" x="709" y="163" width="10" height="20" rx="3"/>
+<text class="th" x="732" y="175">Grip</text>
+<text class="ts" x="732" y="192">Take a potion, a weapon, an item, the</text>
+<text class="ts" x="732" y="207">bag. Open the hand: let go.</text>
+<circle class="stick" cx="714" cy="231" r="9"/>
+<text class="th" x="732" y="235">Stick</text>
+<text class="ts" x="732" y="252">Push sideways: turn (snap 30 degrees</text>
+<text class="ts" x="732" y="267">by default, or smooth).</text>
+<text class="ts" x="732" y="282">Click: a wheel on this hand; point at it</text>
+<text class="ts" x="732" y="297">with the left hand. Held 0.5 s: the</text>
+<text class="ts" x="732" y="312">game's menu (inventory, skills...).</text>
+<circle class="btn" cx="714" cy="336" r="9"/><text class="tb" x="714" y="336" text-anchor="middle" dominant-baseline="central" style="font-size:11px">B</text>
+<text class="th" x="732" y="340">B (upper button)</text>
+<text class="ts" x="732" y="357">Casts the skill given to B.</text>
+<circle class="btn" cx="714" cy="381" r="9"/><text class="tb" x="714" y="381" text-anchor="middle" dominant-baseline="central" style="font-size:11px">A</text>
+<text class="th" x="732" y="385">A (lower button)</text>
+<text class="ts" x="732" y="402">Interact: talk, open doors, chests,</text>
+<text class="ts" x="732" y="417">waypoints, portals (aim at it).</text>
+
+<!-- notes -->
+<line class="rule" x1="24" y1="452" x2="976" y2="452"/>
+<text class="tn" x="24" y="476">Both stick clicks held together for 1 s: the controls screen again. Left grip + left stick click (grip first): reset your height.</text>
+<text class="tn" x="24" y="498">Valve Index and Steam Frame: the left controller's buttons are labelled A and B - read X as the left A, and Y as the left B.</text>
+<text class="tn" x="24" y="520">Valve Index has no menu button: hold the right stick click for the game's menu (Esc). Squeeze the handle to take, keep your</text>
+<text class="tn" x="24" y="538">fingers round it to hold, open them to let go. Vive wands, Windows MR: a trackpad click opens a wheel; the triggers pick in it.</text>
+</svg>

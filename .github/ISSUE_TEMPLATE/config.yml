@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: D2R VR (the engine) by natpoh
+    url: https://github.com/natpoh/diablo2-vr-port
+    about: Problems in natpoh's D2R VR itself (with BodyWalk or FlatVR) belong to his project.
+  - name: Security problem
+    url: https://github.com/Ztnzvoid/ZVDiablo2VR/blob/main/SECURITY.md
+    about: Please do not open a public issue for a security problem; see SECURITY.md.

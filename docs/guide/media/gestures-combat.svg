@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="740" viewBox="0 0 1000 740" role="img"><title>Combat gestures</title><desc>Four panels: a melee swing through a monster, the bow drawn with an arrow taken from the quiver behind the right shoulder, the crossbow shot then cocked by a flick down and back up, and a javelin thrown by opening the hand mid-swing.</desc>
+<defs>
+<marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#f1d28a"/></marker>
+<marker id="at" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9ee3d8"/></marker>
+</defs>
+<style>
+.bg{fill:#14110f}
+.panel{fill:#1b1714;stroke:#2e2925;stroke-width:1}
+.limb{fill:none;stroke:#8a7f72;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.ghost{fill:none;stroke:#8a7f72;stroke-width:5;stroke-linecap:round;stroke-dasharray:2 7;opacity:0.8}
+.head{fill:#3a342e;stroke:#8a7f72;stroke-width:1.5}
+.blade{stroke:#d8d0c0;stroke-width:4;stroke-linecap:round}
+.wood{stroke:#8a6a3a;stroke-width:6;stroke-linecap:round}
+.limbbow{fill:none;stroke:#c9952e;stroke-width:4;stroke-linecap:round}
+.string{fill:none;stroke:#e9dcc4;stroke-width:1.2}
+.path-a{fill:none;stroke:#f1d28a;stroke-width:2;stroke-dasharray:6 4}
+.path-t{fill:none;stroke:#9ee3d8;stroke-width:2;stroke-dasharray:6 4}
+.solid-a{fill:none;stroke:#f1d28a;stroke-width:2.5}
+.monster{fill:#4a1f1f;stroke:#a05050;stroke-width:1.2}
+.quiver{fill:#1f6b63;stroke:#9ee3d8;stroke-width:1}
+.badge circle{fill:#9a6b17;stroke:#f1d28a;stroke-width:0.8}
+.badge text{fill:#fff;font-weight:bold;font-size:11px}
+text{font-family:Georgia,'Times New Roman',serif;fill:#e9dcc4}
+.tt{font-size:18px;font-weight:bold;fill:#f3e6cc}
+.th{font-size:15px;font-weight:bold;fill:#f3e6cc}
+.ts{font-size:12px;fill:#cdbfa6}
+.tl{font-size:11px;fill:#f1d28a}
+</style>
+<rect class="bg" x="0" y="0" width="1000" height="740" rx="12"/>
+<text class="tt" x="24" y="36">Combat gestures</text>
+
+<!-- A: melee -->
+<g transform="translate(10,56)">
+<rect class="panel" x="0" y="0" width="485" height="330" rx="10"/>
+<text class="th" x="18" y="30">Melee: swing through the monster</text>
+<g transform="translate(0,24)">
+<ellipse class="monster" cx="310" cy="125" rx="34" ry="58"/>
+<text class="tl" x="310" y="200" text-anchor="middle" style="fill:#cdbfa6">monster</text>
+<path class="path-a" d="M 232 30 Q 336 40 336 180" marker-end="url(#am)"/>
+<text class="tl" x="346" y="44">tip at 2 m/s or more</text>
+<circle class="head" cx="130" cy="58" r="13"/>
+<polyline class="limb" points="130,72 130,135"/>
+<polyline class="limb" points="130,135 116,200"/>
+<polyline class="limb" points="130,135 144,200"/>
+<polyline class="limb" points="130,84 160,102 190,96"/>
+<line class="blade" x1="190" y1="97" x2="268" y2="66"/>
+<line class="blade" x1="185" y1="88" x2="194" y2="107" style="stroke-width:3"/>
+</g>
+<text class="ts" x="18" y="254">Move the blade through a monster, fast and on purpose.</text>
+<text class="ts" x="18" y="271">Holding the arm out or waving the hand on the spot never hits.</text>
+<text class="ts" x="18" y="288">One hit per monster per stroke: swing back, or pull out, to hit again.</text>
+<text class="ts" x="18" y="305">Blows keep the game's attack pace; a hit stops the blade a moment.</text>
+</g>
+
+<!-- B: bow -->
+<g transform="translate(505,56)">
+<rect class="panel" x="0" y="0" width="485" height="330" rx="10"/>
+<text class="th" x="18" y="30">Bow: an arrow from the quiver</text>
+<g transform="translate(0,24)">
+<polygon class="quiver" points="96,50 110,44 124,98 110,104"/>
+<line x1="100" y1="50" x2="96" y2="38" stroke="#e9dcc4" stroke-width="1.5"/>
+<line x1="106" y1="47" x2="104" y2="35" stroke="#e9dcc4" stroke-width="1.5"/>
+<circle class="head" cx="130" cy="58" r="13"/>
+<polyline class="limb" points="130,72 130,135"/>
+<polyline class="limb" points="130,135 116,200"/>
+<polyline class="limb" points="130,135 144,200"/>
+<polyline class="limb" points="130,84 170,88 206,84"/>
+<path class="limbbow" d="M 206 30 Q 248 84 206 138"/>
+<polyline class="string" points="206,30 162,84 206,138"/>
+<polyline class="limb" points="130,86 150,100 162,86"/>
+<line x1="162" y1="84" x2="236" y2="84" stroke="#e9dcc4" stroke-width="2"/>
+<path class="path-a" d="M 112 36 Q 160 8 200 74" marker-end="url(#am)"/>
+<line class="solid-a" x1="200" y1="112" x2="160" y2="112" marker-end="url(#am)"/>
+<path class="path-a" d="M 244 84 L 360 84" marker-end="url(#am)"/>
+<g class="badge"><circle cx="86" cy="32" r="10"/><text x="86" y="32" text-anchor="middle" dominant-baseline="central">1</text></g>
+<g class="badge"><circle cx="216" cy="56" r="10"/><text x="216" y="56" text-anchor="middle" dominant-baseline="central">2</text></g>
+<g class="badge"><circle cx="180" cy="128" r="10"/><text x="180" y="128" text-anchor="middle" dominant-baseline="central">3</text></g>
+<g class="badge"><circle cx="300" cy="66" r="10"/><text x="300" y="66" text-anchor="middle" dominant-baseline="central">4</text></g>
+</g>
+<text class="ts" x="18" y="254">1 Squeeze the right trigger behind your right shoulder: an arrow.</text>
+<text class="ts" x="18" y="271">2 Bring it to the string near the bow hand: nocked.   3 Pull back.</text>
+<text class="ts" x="18" y="288">4 Release the trigger: the arrow flies where it points.</text>
+<text class="ts" x="18" y="305">Released before a full draw: no shot. No quiver worn: no arrow.</text>
+</g>
+
+<!-- C: crossbow -->
+<g transform="translate(10,396)">
+<rect class="panel" x="0" y="0" width="485" height="330" rx="10"/>
+<text class="th" x="18" y="30">Crossbow: shoot, then flick to cock</text>
+<g transform="translate(0,24)">
+<circle class="head" cx="130" cy="58" r="13"/>
+<polyline class="limb" points="130,72 130,135"/>
+<polyline class="limb" points="130,135 116,200"/>
+<polyline class="limb" points="130,135 144,200"/>
+<polyline class="ghost" points="130,86 178,110 232,100"/>
+<line class="wood" x1="178" y1="100" x2="252" y2="96"/>
+<line class="limbbow" x1="244" y1="76" x2="248" y2="116"/>
+<line x1="214" y1="94" x2="262" y2="93" stroke="#e9dcc4" stroke-width="1.5"/>
+<polyline class="limb" points="130,84 160,104 192,99"/>
+<polyline class="solid-a" points="284,56 296,122 308,56" marker-end="url(#am)"/>
+<text class="tl" x="320" y="82">flick down and</text>
+<text class="tl" x="320" y="97">straight back up:</text>
+<text class="tl" x="320" y="112">a click, cocked</text>
+<text class="tl" x="168" y="146" style="fill:#cdbfa6">left hand on the front: steadier</text>
+</g>
+<text class="ts" x="18" y="254">Right trigger: one shot, the game's own, along the right hand.</text>
+<text class="ts" x="18" y="271">Then flick the crossbow down and straight back up (about 0.2 s): cocked.</text>
+<text class="ts" x="18" y="288">Un-cocked, the trigger only gives a dull pulse. With your left hand on</text>
+<text class="ts" x="18" y="305">the front of the stock, the shot follows the line between your hands.</text>
+</g>
+
+<!-- D: javelin -->
+<g transform="translate(505,396)">
+<rect class="panel" x="0" y="0" width="485" height="330" rx="10"/>
+<text class="th" x="18" y="30">Throwing: open the hand mid-swing</text>
+<g transform="translate(0,24)">
+<circle class="head" cx="130" cy="58" r="13"/>
+<polyline class="limb" points="130,72 130,135"/>
+<polyline class="limb" points="130,135 116,200"/>
+<polyline class="limb" points="130,135 144,200"/>
+<polyline class="limb" points="130,84 110,72 100,48"/>
+<line class="blade" x1="64" y1="66" x2="150" y2="21" style="stroke:#b8a888"/>
+<path class="path-a" d="M 106 40 Q 196 8 244 92" marker-end="url(#am)"/>
+<polygon points="222,58 226,66 235,67 228,73 230,82 222,77 214,82 216,73 209,67 218,66" fill="#f1d28a"/>
+<text class="tl" x="244" y="56">open the hand here</text>
+<line class="blade" x1="262" y1="110" x2="350" y2="128" style="stroke:#b8a888"/>
+<path class="path-a" d="M 350 128 L 410 140" marker-end="url(#am)"/>
+</g>
+<text class="ts" x="18" y="254">Grip: the javelin (or a throwing knife or axe) is in your hand.</text>
+<text class="ts" x="18" y="271">Wind up, throw, and open the hand mid-motion: it flies along the weapon.</text>
+<text class="ts" x="18" y="288">Opened slowly, nothing flies. Take the next one from its place on you.</text>
+<text class="ts" x="18" y="305">A weapon skill picked in the wheel rides every throw (Poison Javelin...).</text>
+</g>
+</svg>

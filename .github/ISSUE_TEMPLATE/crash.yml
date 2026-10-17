@@ -1,0 +1,58 @@
+name: Crash report
+description: The game closed, froze or showed an error with ZVDiablo2VR. The launcher's "Report a problem" opens this form.
+title: "[Crash]: "
+labels: ["crash"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting. The launcher's **Report a problem** button made a zip of the mod's logs:
+        **attach it below** (drag it into the "Logs" box). Before posting, remove anything private.
+        Never attach saves, game files, memory dumps or account details.
+  - type: textarea
+    id: doing
+    attributes:
+      label: What were you doing?
+      description: Where in the game, what you did just before (drew a weapon, picked something up, changed area, opened a menu...), and whether it happens again.
+      placeholder: |
+        Act 1, Cold Plains, put my axe away on the right hip; the picture froze about 3 seconds later. Happened twice.
+    validations:
+      required: true
+  - type: input
+    id: headset
+    attributes:
+      label: Headset and OpenXR runtime
+      placeholder: "Quest 3 with Virtual Desktop; Valve Index with SteamVR; Quest 2 with Meta Link..."
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Shown in the launcher's status line and About page.
+      placeholder: "mod 0.1.0, launcher 0.1.0, D2R VR engine vrcam 0.163.0, game 3.3.93847"
+  - type: input
+    id: system
+    attributes:
+      label: GPU and Windows
+      placeholder: "RTX 3080, driver 5xx.xx, Windows 11"
+  - type: textarea
+    id: report
+    attributes:
+      label: The report's summary, or the end of the log
+      description: The launcher pastes its summary here. Otherwise, paste the last lines of `<game folder>\d2rloader\logs\d2r-vr-frame.log`.
+      render: text
+  - type: textarea
+    id: attachment
+    attributes:
+      label: Logs (attach the zip the launcher made)
+      description: Drag the zip here. If there is none, attach `d2r-vr-frame.log` from `<game folder>\d2rloader\logs\`.
+    validations:
+      required: true
+  - type: checkboxes
+    id: offline
+    attributes:
+      label: Offline
+      options:
+        - label: It happened in an offline game, or before entering a game.
+          required: true

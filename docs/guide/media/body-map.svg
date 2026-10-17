@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img"><title>Body map</title><desc>A figure seen from the front and from behind with numbered places: the mouth, the potion belt at the front of the waist, the two hip holster places, the left wrist, the ground in front, the two upper-back holster places (the shield on the left, the bow, two-handed weapons and javelins on the right), the quiver behind the right shoulder and the bag at the lower back.</desc>
+<style>
+.bg{fill:#14110f}
+.body{fill:#3a342e;stroke:#8a7f72;stroke-width:0.8}
+.ground{fill:none;stroke:#8a7f72;stroke-width:1;stroke-dasharray:5 4}
+.bagbox{fill:#1f6b63;fill-opacity:0.2;stroke:#9ee3d8;stroke-width:1;stroke-dasharray:4 3}
+.belt{fill:#c9952e;stroke:#f1d28a;stroke-width:0.8;stroke-dasharray:3 2}
+.p circle{fill:#5b3f8c;stroke:#c8b4f0;stroke-width:0.8}
+.t circle{fill:#1f6b63;stroke:#9ee3d8;stroke-width:0.8}
+.a circle{fill:#9a6b17;stroke:#f1d28a;stroke-width:0.8}
+.w circle{fill:#2f5d8a;stroke:#a9c8ee;stroke-width:0.8}
+.g circle{fill:#4a433b;stroke:#cdbfa6;stroke-width:0.8}
+.p text,.t text,.a text,.w text,.g text{fill:#fff;font-weight:bold;font-size:12px}
+.rule{stroke:#3a342e;stroke-width:1}
+text{font-family:Georgia,'Times New Roman',serif;fill:#e9dcc4}
+.tt{font-size:18px;font-weight:bold;fill:#f3e6cc}
+.th{font-size:14px;font-weight:bold;fill:#f3e6cc}
+.ts{font-size:11.5px;fill:#cdbfa6}
+.tc{font-size:12px;fill:#cdbfa6}
+</style>
+<rect class="bg" x="0" y="0" width="1000" height="600" rx="12"/>
+<text class="tt" x="24" y="36">Your body is the interface</text>
+
+<!-- front view -->
+<g>
+<rect class="body" x="50" y="112" width="240" height="16" rx="6"/>
+<circle class="body" cx="170" cy="82" r="24"/>
+<rect class="body" x="135" y="104" width="70" height="146" rx="10"/>
+<rect class="body" x="140" y="248" width="25" height="150" rx="6"/>
+<rect class="body" x="175" y="248" width="25" height="150" rx="6"/>
+<ellipse class="ground" cx="170" cy="420" rx="110" ry="16"/>
+<rect class="belt" x="135" y="226" width="70" height="12" rx="3"/>
+<g class="a"><circle cx="170" cy="92" r="11"/><text x="170" y="92" text-anchor="middle" dominant-baseline="central">1</text></g>
+<g class="a"><circle cx="170" cy="232" r="11"/><text x="170" y="232" text-anchor="middle" dominant-baseline="central">2</text></g>
+<g class="p"><circle cx="124" cy="258" r="11"/><text x="124" y="258" text-anchor="middle" dominant-baseline="central">3</text></g>
+<g class="p"><circle cx="216" cy="258" r="11"/><text x="216" y="258" text-anchor="middle" dominant-baseline="central">3</text></g>
+<g class="w"><circle cx="272" cy="120" r="11"/><text x="272" y="120" text-anchor="middle" dominant-baseline="central">4</text></g>
+<g class="g"><circle cx="240" cy="420" r="11"/><text x="240" y="420" text-anchor="middle" dominant-baseline="central">5</text></g>
+<text class="th" x="170" y="462" text-anchor="middle">Front</text>
+<text class="tc" x="170" y="480" text-anchor="middle">your left is on the right</text>
+</g>
+
+<!-- back view -->
+<g>
+<rect class="body" x="310" y="112" width="240" height="16" rx="6"/>
+<circle class="body" cx="430" cy="82" r="24"/>
+<rect class="body" x="395" y="104" width="70" height="146" rx="10"/>
+<rect class="body" x="400" y="248" width="25" height="150" rx="6"/>
+<rect class="body" x="435" y="248" width="25" height="150" rx="6"/>
+<rect class="bagbox" x="392" y="196" width="76" height="88" rx="8"/>
+<g class="p"><circle cx="410" cy="150" r="11"/><text x="410" y="150" text-anchor="middle" dominant-baseline="central">6</text></g>
+<g class="p"><circle cx="450" cy="150" r="11"/><text x="450" y="150" text-anchor="middle" dominant-baseline="central">7</text></g>
+<g class="a"><circle cx="482" cy="96" r="11"/><text x="482" y="96" text-anchor="middle" dominant-baseline="central">9</text></g>
+<g class="p"><circle cx="378" cy="250" r="11"/><text x="378" y="250" text-anchor="middle" dominant-baseline="central">3</text></g>
+<g class="p"><circle cx="482" cy="250" r="11"/><text x="482" y="250" text-anchor="middle" dominant-baseline="central">3</text></g>
+<g class="t"><circle cx="430" cy="240" r="11"/><text x="430" y="240" text-anchor="middle" dominant-baseline="central">8</text></g>
+<text class="th" x="430" y="462" text-anchor="middle">Back</text>
+<text class="tc" x="430" y="480" text-anchor="middle">your left is on the left</text>
+</g>
+
+<!-- legend -->
+<g class="a"><circle cx="604" cy="72" r="11"/><text x="604" y="72" text-anchor="middle" dominant-baseline="central">1</text></g>
+<text class="th" x="624" y="76">Mouth</text>
+<text class="ts" x="624" y="93">Bring a potion to it and tip it: you drink.</text>
+<g class="a"><circle cx="604" cy="118" r="11"/><text x="604" y="118" text-anchor="middle" dominant-baseline="central">2</text></g>
+<text class="th" x="624" y="122">Belt</text>
+<text class="ts" x="624" y="139">Your potions, in front at the waist. Grip one to take it.</text>
+<g class="p"><circle cx="604" cy="164" r="11"/><text x="604" y="164" text-anchor="middle" dominant-baseline="central">3</text></g>
+<text class="th" x="624" y="168">Hips, left and right</text>
+<text class="ts" x="624" y="185">One-handed weapons, throwing knives and axes.</text>
+<g class="w"><circle cx="604" cy="210" r="11"/><text x="604" y="210" text-anchor="middle" dominant-baseline="central">4</text></g>
+<text class="th" x="624" y="214">Left wrist</text>
+<text class="ts" x="624" y="231">Look at it like a watch. Its back: the round map.</text>
+<text class="ts" x="624" y="246">Its inside: life, mana and experience.</text>
+<g class="g"><circle cx="604" cy="271" r="11"/><text x="604" y="271" text-anchor="middle" dominant-baseline="central">5</text></g>
+<text class="th" x="624" y="275">The ground</text>
+<text class="ts" x="624" y="292">A low hand over an item, grip: it comes into your hand.</text>
+<g class="p"><circle cx="604" cy="317" r="11"/><text x="604" y="317" text-anchor="middle" dominant-baseline="central">6</text></g>
+<text class="th" x="624" y="321">Back, left</text>
+<text class="ts" x="624" y="338">The shield first. Reach over your shoulder.</text>
+<g class="p"><circle cx="604" cy="363" r="11"/><text x="604" y="363" text-anchor="middle" dominant-baseline="central">7</text></g>
+<text class="th" x="624" y="367">Back, right</text>
+<text class="ts" x="624" y="384">The bow, a two-handed weapon or the javelins first.</text>
+<g class="t"><circle cx="604" cy="409" r="11"/><text x="604" y="409" text-anchor="middle" dominant-baseline="central">8</text></g>
+<text class="th" x="624" y="413">The bag</text>
+<text class="ts" x="624" y="430">Middle or lower back, an empty hand, grip: the 3D bag</text>
+<text class="ts" x="624" y="445">opens in that hand. An item let go there: the inventory.</text>
+<g class="a"><circle cx="604" cy="470" r="11"/><text x="604" y="470" text-anchor="middle" dominant-baseline="central">9</text></g>
+<text class="th" x="624" y="474">The quiver</text>
+<text class="ts" x="624" y="491">A bow in hand: the right trigger behind your right</text>
+<text class="ts" x="624" y="506">shoulder takes an arrow.</text>
+
+<line class="rule" x1="24" y1="530" x2="976" y2="530"/>
+<text class="tc" x="24" y="554">Grip a place to draw what hangs there; open the hand to put it back. Let a weapon go slowly at another free place: it hangs</text>
+<text class="tc" x="24" y="574">there from then on. Purple: holster places (one item each). Teal: the bag. Gold: belt, mouth, quiver. Blue: the wrist.</text>
+</svg>
