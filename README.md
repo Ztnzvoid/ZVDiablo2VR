@@ -9,6 +9,16 @@ drink potions from your belt and read your life on your wrist.
 you, your inventory is a bag you hold, your potions are on your belt, your life and map are on your wrist,
 and your skills ride your gestures. The game's own menus stay for what has no gesture yet.
 
+> [!WARNING]
+> **Work in progress - expect bugs.** ZVDiablo2VR is in active development: features change from one
+> version to the next, some are not finished, and you will meet bugs (crashes, odd pictures, gestures that
+> misbehave). Play on a character you do not mind losing, offline.
+>
+> **Thank you in advance to everyone who reports a problem** - every report makes the mod better.
+> [How to report a bug](#report-a-problem): in the launcher press **Report a problem**, or open a
+> [bug report](https://github.com/Ztnzvoid/ZVDiablo2VR/issues/new?template=bug.yml) /
+> [crash report](https://github.com/Ztnzvoid/ZVDiablo2VR/issues/new?template=crash.yml) here on GitHub.
+
 > **A mod, not a game.** You need your own copy of Diablo II: Resurrected. No Blizzard file is in this
 > repository or in its releases: what the mod shows in your hands (weapons, quivers, potions, skill icons)
 > is read from your own installation into local caches that stay on your PC.
@@ -115,6 +125,23 @@ every start and after every save, and the launcher's **Backups** page restores t
 More: [Troubleshooting](docs/guide/troubleshooting.md).
 
 ## Report a problem
+
+**Thank you for every report.** The mod is still in development, and your reports are how bugs get found and
+fixed. A good report says what you were doing, what you expected, what happened, and with which headset and
+runtime - and comes with the log.
+
+**How to report, step by step:**
+
+1. **The easiest:** in the launcher, press **Report a problem**, write what you were doing, press
+   **Create the report and open GitHub**, then drag the zip it made into the GitHub page and press **Submit**.
+2. **Or directly on GitHub:** open the [Issues](https://github.com/Ztnzvoid/ZVDiablo2VR/issues) tab, press
+   **New issue** and pick **Bug report** (something does not work) or **Crash report** (the game closed or
+   froze). Fill in the form and attach `<game folder>\d2rloader\logs\d2r-vr-frame.log` (drag the file into
+   the text box).
+3. **An idea instead of a bug?** Pick **Feature idea**.
+
+Before posting, look at the [open issues](https://github.com/Ztnzvoid/ZVDiablo2VR/issues): if yours is
+there, add a comment or a thumbs-up to it.
 
 - In the launcher, **Report a problem** gathers the mod's logs, your settings and a description of the PC
   into a zip (your Windows user name replaced, never your saves) and opens the
