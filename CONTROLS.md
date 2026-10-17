@@ -213,7 +213,8 @@ layer near the rim. Offline only.
 | **Trigger** on a lit potion, Town Portal scroll or tome, or book - or the **trigger of the hand holding one** taken from the bag | Used as the game's right click: drunk, the portal opened, read (`[bag] use`). An item in the hand stays there while the game uses it (a tome keeps its place in your hand, a charge less) |
 | **Trigger** on the Horadric Cube (lit or in the hand) | The game's Cube panel opens, as its right click does (the bag is put away to show it) |
 | **Trigger** on an Identify scroll or tome (lit or in the hand) | Read: the next trigger identifies. It goes back into the bag, the hand is free; point at an unidentified item (or hold one) and **pull the trigger**: identified by the game (the tooltip says "Identified!", two short pulses). The scroll's trigger again puts it away (30 s at most; the bag put away too) |
-| **Trigger** on anything else | A dull vibration, nothing happens (the log says why). Never the Token of Absolution |
+| **Trigger held 1 s** on the Token of Absolution (lit or in the hand) | Used, as its right click does: every skill and stat point forgotten. Its tooltip says so in red; let go before 1 s (or move off it) and nothing happens |
+| **Trigger** on anything else | A dull vibration, nothing happens (the log says why) |
 | Let go **inside** the bag | It lies where you let it go - the game's grid does not change |
 | Let go **outside** the bag | It falls, or flies on its arc if you throw it, and is **dropped on the ground for real** (`[bag] drop`). The game puts it at your feet: its own drop can place it nowhere else (the drawn throw lands where you aimed, then the game's item lies at your feet) |
 | A weapon or a shield let go at a **holster place** | Hung there (a one-hander at a hip or the back; bows, two-handers, javelins and shields on the back) |
@@ -232,10 +233,8 @@ layer near the rim. Offline only.
 
 Anything the game refuses (no room, its requirements, a menu open, an item on the cursor) comes back into
 the bag with a dull vibration; the log says why (`Horadrim bag: ... - not done: ...`). The use (trigger,
-mouth) and the identify wait for the game's own requests to be confirmed: until then they are refused and
-the log says how (`[packet_log] enabled = yes`, then one potion right-clicked in the game's inventory, and
-one Identify scroll right-clicked then an unidentified item clicked) - once is enough: the confirmations are
-kept in `d2rloader\plugins\horadrim\bag\requests.txt` for the next sessions. The item passes
+mouth) and the identify send the game's own request, as its right click in the inventory does (offline
+games only). The item passes
 through the holster's page on its way (a free spot there is needed for a moment; nothing ever stays
 there, nothing is ever left on the cursor). `[bag] drop = no`: a let-go outside the bag comes back as
 before; `throw_to_aim = no`: it falls straight down.

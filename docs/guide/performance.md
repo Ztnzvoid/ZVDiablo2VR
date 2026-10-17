@@ -23,6 +23,18 @@ supersampling, sharper and much slower. On a 100 Hz headset even an RTX 4090 nee
 hold the rate. A new install starts with a square picture of 2880 a side (what Virtual Desktop streams to a
 Quest 3 at its "1.0"); pick a preset below to match your card.
 
+## Frame generation: OFXR Bridge, 2X
+
+Recommended alongside the mod: OFXR Bridge's frame generation (an OpenXR layer) in **2X** mode. The game
+draws about 50 frames a second and the headset shows 100, so the picture stays smooth while you keep a
+higher quality.
+
+- **2X only.** In 3X the game drops to 21-26 frames a second with long stalls.
+- In OFXR, keep "Prefer FPS over latency" on.
+- The game must reach 50 frames a second for 2X at 100 Hz. Where it drops below, set your headset to
+  90 Hz, or lower the picture's size (the presets below).
+- Keep `[render] xr_layers_off` empty in `horadrim.ini`: a layer named there is not loaded.
+
 ## The launcher's graphics presets
 
 The **Rendering** page's **Graphics presets** card sets in one click everything that costs the most: the
