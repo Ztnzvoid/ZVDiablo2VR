@@ -85,8 +85,8 @@ feature, settings, performance, troubleshooting and questions.
 > [!TIP]
 > **Recommended: OFXR Bridge's frame generation, in 2X only.** Used alongside ZVDiablo2VR it makes the
 > picture smoother and lets you keep a higher quality: the game draws about 50 frames a second and the
-> headset shows 100. Use **2X only** - 3X makes the game stall. Keep `[render] xr_layers_off` empty in
-> `horadrim.ini` so it loads. More in [Performance](docs/guide/performance.md#frame-generation-ofxr-bridge-2x).
+> headset shows 100. Use **2X only** - 3X makes the game stall. Nothing to set in the mod: it loads OFXR
+> by default. More in [Performance](docs/guide/performance.md#frame-generation-ofxr-bridge-2x).
 
 ## Install
 

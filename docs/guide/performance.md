@@ -33,7 +33,8 @@ higher quality.
 - In OFXR, keep "Prefer FPS over latency" on.
 - The game must reach 50 frames a second for 2X at 100 Hz. Where it drops below, set your headset to
   90 Hz, or lower the picture's size (the presets below).
-- Keep `[render] xr_layers_off` empty in `horadrim.ini`: a layer named there is not loaded.
+- Nothing to set in the mod: OpenXR layers load by default (`[render] xr_layers_off` is empty; a layer
+  named there would not load).
 
 ## The launcher's graphics presets
 
