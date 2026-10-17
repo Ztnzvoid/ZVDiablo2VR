@@ -118,6 +118,17 @@ stick walks you, a spell leaves at the start of its cast animation (`walk_after_
 moment) and your hero walks on right after it, instead of standing for the rest of the animation; your casts keep the game's pace (a spell pressed sooner than that is cast at
 its turn, never dropped). A blow with a skill on it (Zeal, Sacrifice...) stops the weapon on the monster it meets.
 
+Direct cast (`[skills] direct_cast = yes`, the default): a missile skill leaves the moment you release, along your
+hand, and your hero walks on - no animation to stand through, as your bow's normal arrow. The bow and crossbow skills
+(Magic, Fire, Cold, Exploding, Ice, Immolation, Freezing Arrow, Multiple Shot, Guided Arrow), the javelin skills
+(Poison and Plague Javelin, Lightning Bolt, Lightning Fury) and the bolts and missiles (Fire Bolt, Ice Bolt, Charged
+Bolt, Ice Blast, Fire Ball, Glacial Spike, Frozen Orb, Teeth, Bone Spear, Bone Spirit, Holy Bolt, Molten Boulder),
+by the shot, the throw, a trigger or a button. The game's rules stay: its mana cost, your real skill level, an arrow
+or a javelin used, its delays (Frozen Orb), nothing in town, and never faster than the animation would have been
+(your FCR or IAS); a refusal is a dull pulse. Strafe, Lightning, Chain Lightning, Inferno, Teleport, the ground
+spells, curses, summons, auras, warcries and blows keep their button, as do all skills while you are chilled,
+slowed or shapeshifted. `direct_cast = no`: every skill by its button.
+
 The game casts a skill only from one of its eight controller slots (B, X, Y, RB, and LT with each).
 With this layout there are no quick casts, so every slot is lent: a skill given to a button is put on
 a free slot by the game's own assignment, read back - **RB, Y, X, B** first, then **LT + RB, LT + Y,
@@ -207,7 +218,11 @@ layer near the rim. Offline only.
 | Let go **outside** the bag | It falls, or flies on its arc if you throw it, and is **dropped on the ground for real** (`[bag] drop`). The game puts it at your feet: its own drop can place it nowhere else (the drawn throw lands where you aimed, then the game's item lies at your feet) |
 | A weapon or a shield let go at a **holster place** | Hung there (a one-hander at a hip or the back; bows, two-handers, javelins and shields on the back) |
 | A weapon held out of the bag, **squeeze that hand's trigger** | It goes to a free holster place and is drawn into that hand, ready to fight with (`[bag] equip`) |
-| Armour or a jewel let go at **its place on your body** | Worn (`[bag] equip`): a helm on top of the head, an amulet at the throat, a body armour at the chest, a belt at the front of the waist, boots low near the floor, gloves or a ring at the wrist of the hand holding the bag. What you wore there comes into the bag |
+| Armour or a jewel let go at **its place on your body** | Worn (`[bag] equip`): a helm on top of the head, an amulet at the throat, a body armour at the chest, a belt at the front of the waist, boots low near the floor, gloves or a ring at the hand holding the bag (anywhere from its wrist to its fingers; a ring goes on **that** hand: open the bag with the other hand for the other ring). What you wore there comes into the bag. The item's panel says where it is worn ("Worn: let go on your head"); held there, the item glows, a brass stud marks the place and a light tick says it |
+| Your **empty** rummaging hand's **grip on your body** where something is worn, the bag open | Taken off into the bag, **in that hand** while you keep squeezing (`[bag] equip`): the top of the head, the throat, the chest, the front of the waist, your feet, the bag hand's fingers (a ring) or wrist (gloves). A light tick and a lit stud say a worn item is under the hand. Not the belt where its potions hang (that grip takes a potion). Weapons and shields: the holster's places, as before |
+| An item let go **on the Horadric Cube** in the bag | Into the Cube, at its first free place (`[bag] cube`); no room there: it stays in the bag |
+| The **Cube held** out of the bag and **turned over** (the controller's top down) a moment | Emptied into the bag: every item in it into the inventory, or none if they do not all fit (`[bag] cube`). Transmuting: the game's Cube panel (trigger on the Cube) |
+| The **brass button** on the bag's front (right of the gauge): touch it, or point at it and pull the trigger | **Sort** (`[bag] sort_button`): the game's grid sorted - the biggest first, by kind (weapons and armour, charms, gems, runes and jewels, potions, scrolls, tomes and keys, quest items and the Cube), packed with no hole, one move (all or nothing, nothing leaves the inventory) - and every item laid flat at its cells' place in the bag. Not while an item is in a hand or on its way, on the game's cursor, or a menu is open |
 | A potion let go at the **belt** | Into that column (`[bag] belt`) - not possible yet: the game's request is not known; it comes back into the bag and the log says so |
 | A **weapon in your hand** let go inside the open bag | Into the inventory (through a free holster place) |
 | A belt potion let go inside the open bag | Into the inventory - not possible yet (the same reason): it goes back to the belt |

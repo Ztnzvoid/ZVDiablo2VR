@@ -53,7 +53,7 @@ triggers pick in a wheel.
 | Place | What is there |
 |---|---|
 | **Hips**, left and right | One-handed weapons, throwing knives and axes |
-| **Upper back, left** | The shield (first choice) - reach over your shoulder |
+| **Upper back, left** | The shield (first choice) or the bow - reach over your shoulder |
 | **Upper back, right** | The bow, a two-handed weapon or the javelins (first choice) |
 | **Behind the right shoulder** | The quiver: a bow in hand, the right trigger there takes an arrow |
 | **Middle or lower back** | The bag: an empty hand and the grip open the 3D bag in that hand; an item let go there goes into your inventory |

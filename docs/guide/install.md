@@ -63,9 +63,6 @@ install.
 
 ![The Play page, ready to install](../../tools/launcher/screenshots/launcher-play-install-en.png)
 
-*(The launcher's screenshots were taken before the project took its name: the window title then read
-"Diablo II Resurrected VR" and the package "d2rvr-mod". Everything else is the same.)*
-
 What happens, in order:
 
 1. **D2RLoader, with your consent.** If the game folder has no D2RLoader, a window asks *"Download
