@@ -9,6 +9,18 @@ themselves, with pictures, are in [Controls and gestures](controls.md).
 your body what the game would ask you to do in a menu. Each one ships on by default and has its own off
 switch.
 
+**Some mechanics break the original game's rhythm - on purpose.** Diablo II was made for a mouse: you click
+and the hero acts at once, at the game's tempo. In VR that tempo fights what players expect from a VR game:
+presence, things done by hand, objects with weight. So in places the mod trades the click's rhythm for
+physical play: a blow lands when your blade actually goes through a monster, and a heavy weapon you are
+barely strong enough for follows your hand late; a spell goes where your arm points, further the more you
+stretch it; pots and barrels break when you strike them; potions are taken from your belt and drunk at your
+mouth; weapons are grabbed anywhere, passed from hand to hand, and fall to the ground when you let go.
+These moments can feel slower, or simply different, than the original. That is a deliberate choice, made to
+meet the immersion standards of VR games - not a bug. The game's own rules stay in charge (its damage, its
+attack speed, its drops), and every one of these mechanics has its own off switch if you prefer to stay
+closer to the original pace.
+
 ## The world in the headset
 
 natpoh's D2R VR engine draws the game in stereo, in first person, through native OpenXR: your head is the
